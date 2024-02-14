@@ -7,7 +7,7 @@ const allowedTo = require('../middleware/allowedTo');
 const userRoles = require('../utils/user-roles');
 
 router.route('/')
-    .get(verifyToken,allowedTo(userRoles.ADMIN, userRoles.ROOT),coursesController.getAllCourses)
+    .get(coursesController.getAllCourses)
     .post(verifyToken,allowedTo(userRoles.ROOT),coursesController.addCourse);
 
 router.route('/:courseID')
