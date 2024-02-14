@@ -1,4 +1,3 @@
-let { users } = require('../dataBase/users-data')
 const User = require('../models/users.model')
 const httpStatusText = require('../utils/httpStatusText')
 const { validationResult } = require('express-validator');
